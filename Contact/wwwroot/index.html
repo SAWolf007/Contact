@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Contact List   -   CRUD</title>
+    <link rel=" stylesheet" href="css/site.css" />
+</head>
+<body>
+    <h1>Contacts</h1>
+    <h4>Add</h4>
+    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+        <input type="text" id="add-firstname" placeholder="First Name" />
+        <input type="text" id="add-surname" placeholder="Surname" />
+        <input type="text" id="add-company" placeholder="Company" />
+        <input type="text" id="add-cellno" placeholder="Cell Phone Number" />
+        <input type="text" id="add-email" placeholder="Email" />
+        <input type="submit" value="Add" />
+    </form>
+
+
+    <p id="counter"></p>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Company</th>
+            <th>Cell No</th>
+            <th>Email Address</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tbody id="contacts"></tbody>
+    </table>
+
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getItems();
+    </script>
+
+</body>
+</html>
